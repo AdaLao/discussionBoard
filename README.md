@@ -1,4 +1,4 @@
-# Disscussion Board (Web)
+# Discussion Board (Web)
 
 # Purpose
 One-page discussion board allows users to create messages and comment on existing messages, also includes validations.
