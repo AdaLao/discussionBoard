@@ -73,12 +73,32 @@ $ npm run
 $ node server.js
 open the web page --
     http://localhost:8000
+    
+or:
+Check the "package.json" file. If in the "scripts" array, it has –– 
+"start": "node server.js", you just need to use this command to run the project. 
+
+$ npm start
+
+next, open the page --
+    http://localhost:8000
 *********************************************************************************
 Now you can test the web page and enjoy the same functions as the pictures shown in the result file.
 ```
 
 # Note
 The $ changes into % now.
+
+###
+```
+*********************************************************************************
+about the console.log, you also can use this style to easy modify in th future.
+
+const port = 8000
+app.listen(port,()=>console.log("listening on port ${port}"))
+*********************************************************************************
+
+```
 
 # Example
 ###
