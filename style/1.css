@@ -58,8 +58,8 @@ button{
      margin-left: -10px;
  }
  #submit:hover {
-    background-color: yellow;
+    background-color: #ffff00;
  }
  #submit1:hover {
-    background-color: blueviolet;
+    background-color: #f3acd4;
  }
