@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Web Page</title>
+    <link rel="stylesheet" type="text/css" href="1.css"/>
+    
+</head>
+<body>
+    <h1>Discussion Board</h1>
+    <hr>
+    <div class="first">
+        <form action="/msg" method="POST">
+            <label for="name">Name:</label><br/>
+            <!--can just use:    required pattern="[A-Za-z]{3,}"   -->
+            <input required minlength="3" pattern="[A-Za-z]+" title="Please use letter, your real name!" type="text" id="name" name="name"><br/>
+            <label for="message">Message:</label><br/>
+            <textarea required name="message" id="message" class="message"></textarea><br/>
+            <button type="submit" name="submit" id="submit" >Post message</button><br/><br/>
+        </form>
+        <% msgs.forEach(msg => { %>
+            <div class="show">
+                <div id="mes1">
+                    <label for="name"><b>Name: </b> <%= msg.name %></label><br/>
+                    <label for="message"><b>Message: </b></label>
+                    <p for="message"> <%= msg.message %></p> 
+                </div>
+                <div class="show1">
+                    <% msg.comments.forEach(comment => { %>
+                        <div id="comment1">
+                            <label for="name">Name: <%= comment.name %></label><br/>
+                            <label for="comment">Comment:</label>
+                            <p class="show2"><%= comment.comment %></p>
+                        </div>
+                    <% }) %>
+                    <div class="add">
+                        <form action="/comment" method="POST">
+                            <label for="name">Name:</label><br/>
+                            <input type="hidden" id="ident" name="ident" value="<%= msg._id %>">
+                            <input required minlength="3" pattern="[A-Za-z]+" title="Please use letter, your real name!" type="text" id="name" name="name"><br/>
+                            <label for="message">Comment:</label><br/>
+                            <textarea required name="comment" id="comment" class="message1"></textarea><br/>
+                            <button type="submit" name="submit1" id="submit1" >Post Comment</button>
+                            <br/>
+                            <br/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

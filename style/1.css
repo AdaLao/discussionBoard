@@ -1,0 +1,59 @@
+body{
+    background-image: url('green.png');
+    background-size: cover;
+    padding-bottom: 30px;
+}
+h1{
+    text-align: center;
+    color: green;
+    text-shadow: 0.15em 0.21em 0.15em #1dda65
+       }
+
+hr{
+    height: 2px;
+    width: 800px;
+    border: 0ch;
+    background: linear-gradient(to right, #ffffff00, #0a4e13,#0a4e13,#acff2f00); 
+}
+input,textarea{
+    margin-top:3px;
+    margin-bottom:6px;
+}
+textarea{
+    width: 600px;
+}
+.first{
+    width: 600px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+button{
+    float: right;
+    background: #7ea87f;
+    border: 2px solid;
+    box-shadow: 2px 2px;
+}
+.show, .show1{
+    line-height: 23px;
+    padding-left: 20px;  
+ }
+ .show1{
+     line-height: 19px;
+     font-size: smaller;
+ }
+ .add{
+     margin-top: 15px;
+ }
+ .message1{
+     width: 560px;
+ }
+ p{
+     width: 485px;
+     padding-left: 70px;
+     margin-top: -22px;
+ }
+ .show2{
+     margin-top: -18px;
+     margin-left: -10px;
+ }
